@@ -48,7 +48,7 @@
 -type dispatch_match() :: '_' | <<_:8>> | [binary() | '_' | '...' | atom()].
 -type dispatch_path() :: {dispatch_match(), module(), any()}.
 -type dispatch_rule() :: {Host::dispatch_match(), Paths::[dispatch_path()]}.
--opaque dispatch_rules() :: [dispatch_rule()].
+-type dispatch_rules() :: [dispatch_rule()].
 -export_type([dispatch_rules/0]).
 
 -spec compile(routes()) -> dispatch_rules().
